@@ -30,11 +30,24 @@ func _physics_process(delta):
 	
 	if isMoving:
 		framesMoved = framesMoved + 1
+		if direction.y > 0:
+			$AnimatedSprite2D.animation = "down";
+		elif direction.y < 0:
+			$AnimatedSprite2D.animation = "up";
+		elif direction.x > 0:
+			$AnimatedSprite2D.animation = "left";
+			$AnimatedSprite2D.flip_h = true;
+		elif direction.x < 0:
+			$AnimatedSprite2D.animation = "left";
+			$AnimatedSprite2D.flip_h = false;
+
 		if framesMoved >= FRAMES_PER_MOVEMENT:
 			isMoving = false;
 			framesMoved = 0;
 			direction.x = 0;
 			direction.y = 0;
+	else:
+		$AnimatedSprite2D.animation = "default"
 		
 	var collision = move_and_collide(velocity)
 	if collision:

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://djwyjulge0xgi"
-path="res://.godot/imported/Lolo.png-53b997792a054dbde3af2d70ea80037a.ctex"
+uid="uid://byhhvblswi5rl"
+path="res://.godot/imported/Lolo_up_4.png-cc42318ae857ad326bd83772434ac8f8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Lolo.png"
-dest_files=["res://.godot/imported/Lolo.png-53b997792a054dbde3af2d70ea80037a.ctex"]
+source_file="res://art/lolo/Lolo_up_4.png"
+dest_files=["res://.godot/imported/Lolo_up_4.png-cc42318ae857ad326bd83772434ac8f8.ctex"]
 
 [params]
 
