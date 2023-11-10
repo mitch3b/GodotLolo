@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://cjblubudcwmc4"]
+
+[ext_resource type="Script" path="res://scripts/lolo.gd" id="1_kks3s"]
+[ext_resource type="Texture2D" uid="uid://djwyjulge0xgi" path="res://art/Lolo.png" id="2_1iqkr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hroyy"]
+size = Vector2(100, 99)
+
+[node name="Lolo" type="CharacterBody2D"]
+position = Vector2(50, -50)
+script = ExtResource("1_kks3s")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_1iqkr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_hroyy")
