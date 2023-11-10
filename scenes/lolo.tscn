@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://djwyjulge0xgi" path="res://art/Lolo.png" id="2_1iqkr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hroyy"]
-size = Vector2(100, 99)
+size = Vector2(99.5, 99.5)
 
 [node name="Lolo" type="CharacterBody2D"]
 position = Vector2(50, -50)
