@@ -1,0 +1,65 @@
+[gd_scene load_steps=9 format=3 uid="uid://nqmrqrd7ank"]
+
+[ext_resource type="Script" path="res://scripts/snakey.gd" id="1_4b30r"]
+[ext_resource type="Texture2D" uid="uid://h5yxui5vn2e8" path="res://art/loloEnemySpriteSheet.png" id="1_l6tua"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3heim"]
+atlas = ExtResource("1_l6tua")
+region = Rect2(0, 96, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qcbtf"]
+atlas = ExtResource("1_l6tua")
+region = Rect2(16, 96, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ap58a"]
+atlas = ExtResource("1_l6tua")
+region = Rect2(32, 96, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sqbyd"]
+atlas = ExtResource("1_l6tua")
+region = Rect2(48, 96, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f425k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3heim")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qcbtf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ap58a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sqbyd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sqbyd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ap58a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qcbtf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3heim")
+}],
+"loop": true,
+"name": &"afterHeart",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_564ah"]
+size = Vector2(16, 16)
+
+[node name="Snakey" type="StaticBody2D"]
+script = ExtResource("1_4b30r")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_f425k")
+animation = &"afterHeart"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_564ah")

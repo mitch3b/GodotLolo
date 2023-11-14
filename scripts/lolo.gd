@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
-const BLOCK_SIZE = 100
+const BLOCK_SIZE = 16
 const HALF_BLOCK_SIZE = BLOCK_SIZE/2;
-const FRAMES_PER_MOVEMENT = 10;
+const FRAMES_PER_MOVEMENT = 8;
 const SPEED = HALF_BLOCK_SIZE/FRAMES_PER_MOVEMENT;
 
 var isMoving = false;
