@@ -1,0 +1,48 @@
+[gd_scene load_steps=7 format=3 uid="uid://dl5ejs3tbtibe"]
+
+[ext_resource type="Texture2D" uid="uid://h5yxui5vn2e8" path="res://art/loloEnemySpriteSheet.png" id="1_qlqpn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pjcii"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xias7"]
+atlas = ExtResource("1_qlqpn")
+region = Rect2(0, 304, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tefng"]
+atlas = ExtResource("1_qlqpn")
+region = Rect2(0, 320, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k1o51"]
+atlas = ExtResource("1_qlqpn")
+region = Rect2(0, 336, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tgbqd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xias7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tefng")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k1o51")
+}],
+"loop": true,
+"name": &"explode",
+"speed": 5.0
+}]
+
+[node name="loloBullet" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_pjcii")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_tgbqd")
+frame_progress = 0.841179

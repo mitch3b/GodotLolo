@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://nqmrqrd7ank"]
+[gd_scene load_steps=13 format=3 uid="uid://nqmrqrd7ank"]
 
 [ext_resource type="Script" path="res://scripts/snakey.gd" id="1_4b30r"]
 [ext_resource type="Texture2D" uid="uid://h5yxui5vn2e8" path="res://art/loloEnemySpriteSheet.png" id="1_l6tua"]
@@ -18,6 +18,22 @@ region = Rect2(32, 96, 16, 16)
 [sub_resource type="AtlasTexture" id="AtlasTexture_sqbyd"]
 atlas = ExtResource("1_l6tua")
 region = Rect2(48, 96, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iqyas"]
+atlas = ExtResource("1_l6tua")
+region = Rect2(0, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s0jv4"]
+atlas = ExtResource("1_l6tua")
+region = Rect2(16, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mjvsm"]
+atlas = ExtResource("1_l6tua")
+region = Rect2(32, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ea232"]
+atlas = ExtResource("1_l6tua")
+region = Rect2(48, 64, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_f425k"]
 animations = [{
@@ -49,6 +65,38 @@ animations = [{
 "loop": true,
 "name": &"afterHeart",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iqyas")
+}],
+"loop": true,
+"name": &"egg",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s0jv4")
+}],
+"loop": true,
+"name": &"egg_cracking",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mjvsm")
+}],
+"loop": true,
+"name": &"egg_floating",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ea232")
+}],
+"loop": true,
+"name": &"egg_sinking",
+"speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_564ah"]
@@ -60,6 +108,7 @@ script = ExtResource("1_4b30r")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_f425k")
 animation = &"afterHeart"
+frame_progress = 0.567404
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_564ah")
