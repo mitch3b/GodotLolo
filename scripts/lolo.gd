@@ -18,19 +18,13 @@ func _ready():
 	$AnimatedSprite2D.animation = "default";
 	
 func shootBullet():
-	print("Lolo direction: " + str(direction))
-	if currentBullet: 
+	if is_instance_valid(currentBullet): 
 		currentBullet.destroy2();
 		
-	print("Shooting bullet...");
 	currentBullet = loloBullet.instantiate();
-	currentBullet.position = position;
-
 	get_parent().add_child(currentBullet);
-	print("bullet shot!")
 
 func _process(delta):
-	print("lolo position: " + str(position));
 
 	###########
 	# Moving
