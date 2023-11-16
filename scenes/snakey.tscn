@@ -63,7 +63,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_3heim")
 }],
 "loop": true,
-"name": &"afterHeart",
+"name": &"default",
 "speed": 5.0
 }, {
 "frames": [{
@@ -102,14 +102,13 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_564ah"]
 size = Vector2(16, 16)
 
-[node name="Snakey" type="StaticBody2D"]
+[node name="Snakey" type="CharacterBody2D"]
 collision_layer = 4
+collision_mask = 26
 script = ExtResource("1_4b30r")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_f425k")
-animation = &"afterHeart"
-frame_progress = 0.567404
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_564ah")

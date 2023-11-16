@@ -19,6 +19,7 @@ func _ready():
 	
 func shootBullet():
 	if is_instance_valid(currentBullet): 
+		print("Lolo shot new bullet before old one ran its course...")
 		currentBullet.destroy2();
 		
 	currentBullet = loloBullet.instantiate();
@@ -79,7 +80,7 @@ func _process(delta):
 		
 	var collision = move_and_collide(velocity)
 	if collision:
-		print("I collided with ", collision.get_collider().name)
+		print("Lolo collided with ", collision.get_collider().name)
 		
 	##########
 	# Actions

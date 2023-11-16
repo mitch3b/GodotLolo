@@ -34,14 +34,16 @@ func destroy2():
 	
 
 func _on_body_entered(body: Node2D):
-	if body.name == "Lolo":
-		return;
 	print("Bullet body entered by: " + body.name);
+	if body.name == "Snakey":
+		body.shoot(bullet_direction);
+		
 	destroy2();
 	pass;
 
 
 func _on_area_entered(area: Area2D):
 	print("Bullet area entered by: " + area.name);
+		
 	destroy2();
 	pass;

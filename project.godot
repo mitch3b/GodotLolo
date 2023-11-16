@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Lolo"
-run/main_scene="res://scenes/levelTemplate.tscn"
+run/main_scene="res://scenes/level_1_1.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -61,8 +61,10 @@ shoot_button={
 [layer_names]
 
 2d_physics/layer_1="lolo"
-2d_physics/layer_2="walls"
+2d_physics/layer_2="solidObjects"
 2d_physics/layer_3="enemies"
+2d_physics/layer_4="bullet"
+2d_physics/layer_5="outerWall"
 
 [rendering]
 
